@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUTRETE - Frutas y Verduras Frescas | Mercado Central</title>
+  <meta name="description" content="Frutas, verduras y nutracépticos frescos del Mercado Central. Envío gratis en combos desde $40.000. Esteban Echeverría, Ezeiza, Canning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #39FF14 0%, #4CAF50 50%, #FF6B35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-green {
+      background: rgba(57, 255, 20, 0.15);
+      color: #2e7d32;
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.15);
+      color: #e65100;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 90vh;
+      padding: 8rem 1rem 4rem;
+      background: linear-gradient(135deg, 
+        rgba(57, 255, 20, 0.08) 0%, 
+        rgba(76, 175, 80, 0.08) 25%, 
+        rgba(255, 107, 53, 0.04) 50%, 
+        rgba(255, 215, 0, 0.04) 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 200px;
+      height: 200px;
+      background: rgba(57, 255, 20, 0.2);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+      width: 250px;
+      height: 250px;
+      background: rgba(255, 107, 53, 0.15);
+      border-radius: 50%;
+      filter: blur(100px);
+    }
+
+    .hero-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(57, 255, 20, 0.15);
+      color: #2e7d32;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #39FF14 0%, #4CAF50 50%, #FF6B35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+    }
+
+    .hero-promo {
+      background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+      border: 2px solid rgba(57, 255, 20, 0.3);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-promo strong {
+      color: #2e7d32;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #39FF14 0%, #4CAF50 100%);
+      color: #1a1a1a;
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.5);
+    }
+
+    .btn-outline {
+      background: white;
+      color: #2e7d32;
+      border: 2px solid #4CAF50;
+    }
+
+    .btn-outline:hover {
+      background: rgba(76, 175, 80, 0.1);
+    }
+
+    .hero-info {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+
+    .hero-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .float-card {
+      position: absolute;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .float-card-top {
+      top: -1rem;
+      right: -1rem;
+    }
+
+    .float-card-bottom {
+      bottom: -1rem;
+      left: -1rem;
+    }
+
+    .float-card p {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    .float-card strong {
+      display: block;
+      color: #1a1a1a;
+    }
+
+    /* Sections */
+    .section {
+      padding: 5rem 1rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #39FF14 0%, #4CAF50 50%, #FF6B35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px rgba(57, 255, 20, 0.15);
+    }
+
+    .product-image {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, rgba(57, 255, 20, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
+
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      overflow-y: auto;
+      color: white;
+    }
+
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+
+    .product-overlay h4 {
+      font-size: 1rem;
+      color: #39FF14;
+      margin-bottom: 1rem;
+    }
+
+    .product-overlay h5 {
+      font-size: 0.875rem;
+      color: #4CAF50;
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .product-overlay p {
+      font-size: 0.75rem;
+      color: #d1d5db;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-overlay ul {
+      font-size: 0.75rem;
+      color: #d1d5db;
+      margin-left: 1rem;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFD700 0%, #facc15 100%);
+      color: #1a1a1a;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+
+    /* Combos */
+    .combos-section {
+      background: linear-gradient(180deg, rgba(57, 255, 20, 0.05) 0%, white 100%);
+    }
+
+    .combo-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 2px solid #4CAF50;
+      transition: all 0.3s;
+    }
+
+    .combo-card:hover {
+      border-color: #39FF14;
+      box-shadow: 0 10px 40px rgba(57, 255, 20, 0.2);
+    }
+
+    .combo-image {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .combo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .combo-badges {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .combo-badges .badge {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .combo-badges .badge-orange {
+      background: #FF6B35;
+    }
+
+    .combo-info {
+      padding: 1.5rem;
+    }
+
+    .combo-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .combo-desc {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .combo-products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .combo-products .badge {
+      background: rgba(57, 255, 20, 0.1);
+      color: #2e7d32;
+      font-size: 0.75rem;
+    }
+
+    .combo-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4CAF50;
+    }
+
+    .combo-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    /* Nutracepticos */
+    .nutracepticos-section {
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, white 100%);
+    }
+
+    /* Recetas */
+    .recetas-section {
+      background: linear-gradient(180deg, rgba(255, 107, 53, 0.05) 0%, white 100%);
+    }
+
+    .receta-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .receta-image {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(57, 255, 20, 0.1) 100%);
+      position: relative;
+    }
+
+    .receta-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .receta-badges {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .receta-info {
+      padding: 1.5rem;
+    }
+
+    .patologias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .patologias .badge {
+      border: 1px solid #8b5cf6;
+      color: #8b5cf6;
+      background: transparent;
+    }
+
+    /* Blog */
+    .blog-section {
+      background: white;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-image {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+    }
+
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .blog-info {
+      padding: 1.5rem;
+    }
+
+    .blog-meta {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-excerpt {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+    }
+
+    .footer h4 {
+      color: #39FF14;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: #d1d5db;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.75rem;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: #39FF14;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-info {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .header-badges {
+        display: none;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .whatsapp-btn span {
+        display: none;
+      }
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">🌿 NUTRETE</span>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-green">📍 Esteban Echeverría</span>
+        <span class="badge badge-green">📍 Ezeiza</span>
+        <span class="badge badge-green">📍 Canning</span>
+      </div>
+      <a href="https://wa.me/5491130162232" target="_blank" class="whatsapp-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>11 3016-2232</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <span class="hero-badge">🌱 Directo del Productor a tu Mesa</span>
+        <h1>
+          Frutas y Verduras<br>
+          <span>100% Frescas</span>
+        </h1>
+        <p>Traemos lo mejor del <strong>Mercado Central</strong> directo a tu hogar. Productos naturales, recetas saludables y nutracépticos para tu bienestar.</p>
+        
+        <div class="hero-promo">
+          <p><strong>🎁 ¡Envío GRATIS en combos desde $40.000!</strong></p>
+          <p style="font-size: 0.875rem; margin-top: 0.5rem;">Armá tu combo personal o elegí uno de nuestros combos especiales.</p>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#combos" class="btn btn-primary">📦 Ver Combos</a>
+          <a href="#productos" class="btn btn-outline">🥬 Ver Productos</a>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-info-item">
+            <span>📍</span>
+            <span>Esteban Echeverría, Ezeiza, Canning</span>
+          </div>
+          <div class="hero-info-item">
+            <span>⏰</span>
+            <span>Entrega hoy o mañana</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="hero-banner.png" alt="Frutas y verduras frescas" onerror="this.style.display='none'">
+        <div class="float-card float-card-top float-animation">
+          <strong style="color: #4CAF50;">100% Natural</strong>
+          <p>Sin conservantes</p>
+        </div>
+        <div class="float-card float-card-bottom float-animation" style="animation-delay: 0.5s;">
+          <strong style="color: #FF6B35;">Entrega Rápida</strong>
+          <p>Mismo día o mañana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combos Section -->
+  <section id="combos" class="section combos-section">
+    <div class="container">
+      <h2 class="section-title">🎁 Combos Especiales</h2>
+      <p class="section-subtitle">Elegí uno de nuestros combos armados y <strong>ahorrá dinero</strong> con <strong style="color: #4CAF50;">envío sin costo</strong>. Todos incluyen productos frescos del Mercado Central.</p>
+
+      <div class="products-grid">
+        <!-- Combo 1 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="hero-banner.png" alt="Combo Familiar" onerror="this.parentElement.style.background='linear-gradient(135deg, #4CAF50 0%, #39FF14 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $5.200</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Familiar Completo</h3>
+            <p class="combo-desc">Ideal para una familia de 4 personas. Incluye frutas y verduras para toda la semana.</p>
+            <div class="combo-products">
+              <span class="badge">Manzana x3</span>
+              <span class="badge">Banana x3</span>
+              <span class="badge">Naranja x3</span>
+              <span class="badge">Tomate x2</span>
+              <span class="badge">+4 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$39.800</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Familiar Completo ($39.800)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="recetas/jugo-detox.png" alt="Combo Detox" onerror="this.parentElement.style.background='linear-gradient(135deg, #FF6B35 0%, #f97316 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $4.800</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Detox & Bienestar</h3>
+            <p class="combo-desc">Perfecto para limpiar tu organismo. Frutas y verduras detoxificantes.</p>
+            <div class="combo-products">
+              <span class="badge">Naranja x5</span>
+              <span class="badge">Limón x3</span>
+              <span class="badge">Zanahoria x3</span>
+              <span class="badge">Espinaca x3</span>
+              <span class="badge">+3 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$40.500</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Detox & Bienestar ($40.500)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="recetas/smoothie-bowl.png" alt="Combo Energía" onerror="this.parentElement.style.background='linear-gradient(135deg, #facc15 0%, #FFD700 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $5.300</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Energía Vital</h3>
+            <p class="combo-desc">Frutas energéticas para empezar el día con toda la fuerza.</p>
+            <div class="combo-products">
+              <span class="badge">Banana x5</span>
+              <span class="badge">Manzana x3</span>
+              <span class="badge">Naranja x3</span>
+              <span class="badge">Frutilla x2</span>
+              <span class="badge">+2 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$41.200</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Energía Vital ($41.200)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="recetas/ensalada.png" alt="Combo Verduras" onerror="this.parentElement.style.background='linear-gradient(135deg, #22c55e 0%, #16a34a 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $4.600</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Verduras Frescas</h3>
+            <p class="combo-desc">Todas las verduras que necesitas para cocinar sano toda la semana.</p>
+            <div class="combo-products">
+              <span class="badge">Tomate x4</span>
+              <span class="badge">Lechuga x3</span>
+              <span class="badge">Zanahoria x3</span>
+              <span class="badge">Brócoli x3</span>
+              <span class="badge">+2 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$38.900</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Verduras Frescas ($38.900)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 5 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="recetas/acai-bowl.png" alt="Combo Antioxidante" onerror="this.parentElement.style.background='linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $5.700</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Antioxidante Premium</h3>
+            <p class="combo-desc">Frutas ricas en antioxidantes para combatir el envejecimiento.</p>
+            <div class="combo-products">
+              <span class="badge">Frutilla x3</span>
+              <span class="badge">Uvas x3</span>
+              <span class="badge">Naranja x4</span>
+              <span class="badge">Limón x2</span>
+              <span class="badge">+2 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$42.600</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Antioxidante Premium ($42.600)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 6 -->
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="recetas/sopa-verduras.png" alt="Combo Gourmet" onerror="this.parentElement.style.background='linear-gradient(135deg, #ec4899 0%, #db2777 100%)'">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $6.200</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Gourmet Saludable</h3>
+            <p class="combo-desc">Ingredientes selectos para preparaciones especiales y gourmet.</p>
+            <div class="combo-products">
+              <span class="badge">Palta x3</span>
+              <span class="badge">Brócoli x3</span>
+              <span class="badge">Tomate x3</span>
+              <span class="badge">Espinaca x3</span>
+              <span class="badge">+3 más</span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$43.500</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Gourmet Saludable ($43.500)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos Section -->
+  <section id="productos" class="section">
+    <div class="container">
+      <h2 class="section-title">🍎 Frutas y Verduras</h2>
+      <p class="section-subtitle">Del Mercado Central directo a tu mesa. Pasa el cursor sobre cada producto para ver información nutricional completa.</p>
+
+      <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #4CAF50;">🍎 Frutas</h3>
+      <div class="products-grid" style="margin-bottom: 3rem;">
+        <!-- Manzana -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/manzana.png" alt="Manzana" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍎</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina A, Vitamina E</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Magnesio, Fósforo</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Mejora la salud cardiovascular</li>
+                <li>Regula el azúcar en sangre</li>
+                <li>Fortalece el sistema inmunológico</li>
+              </ul>
+              <h5>🧠 Beneficios Mentales</h5>
+              <ul>
+                <li>Reduce el estrés</li>
+                <li>Mejora la concentración</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Manzana</h3>
+            <span class="product-price">$1.200/kg</span>
+          </div>
+        </div>
+
+        <!-- Banana -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/banana.png" alt="Banana" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍌</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina B6, Vitamina C, Folato</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Magnesio, Manganeso</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Aporta energía rápida</li>
+                <li>Mejora la función muscular</li>
+                <li>Regula la presión arterial</li>
+              </ul>
+              <h5>🧠 Beneficios Mentales</h5>
+              <ul>
+                <li>Mejora el ánimo</li>
+                <li>Favorece el sueño reparador</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Banana</h3>
+            <span class="product-price">$1.000/kg</span>
+          </div>
+        </div>
+
+        <!-- Naranja -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/naranja.png" alt="Naranja" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍊</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina A, Tiamina</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Calcio, Magnesio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Fortalece el sistema inmunológico</li>
+                <li>Mejora la absorción de hierro</li>
+                <li>Protege el corazón</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Naranja</h3>
+            <span class="product-price">$900/kg</span>
+          </div>
+        </div>
+
+        <!-- Frutilla -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/frutilla.png" alt="Frutilla" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍓</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Folato, Vitamina K</p>
+              <h5>🌿 Minerales</h5>
+              <p>Manganeso, Potasio, Yodo</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Poderoso antioxidante</li>
+                <li>Mejora la salud de la piel</li>
+                <li>Antiinflamatorio natural</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Frutilla</h3>
+            <span class="product-price">$2.500/kg</span>
+          </div>
+        </div>
+
+        <!-- Palta -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/palta.png" alt="Palta" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥑</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina E, Vitamina K, Vitamina C</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Magnesio, Cobre</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Salud cardiovascular óptima</li>
+                <li>Mejora la función cerebral</li>
+                <li>Absorción de nutrientes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Palta</h3>
+            <span class="product-price">$3.500/kg</span>
+          </div>
+        </div>
+
+        <!-- Uvas -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/uvas.png" alt="Uvas" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍇</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina K, Vitamina C, Vitamina B</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Cobre, Hierro</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Anti-envejecimiento celular</li>
+                <li>Salud cardiovascular</li>
+                <li>Mejora la visión</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Uvas</h3>
+            <span class="product-price">$1.800/kg</span>
+          </div>
+        </div>
+
+        <!-- Piña -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/pina.png" alt="Piña" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍍</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina B1, Vitamina B6</p>
+              <h5>🌿 Minerales</h5>
+              <p>Manganeso, Cobre, Magnesio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Mejora la digestión</li>
+                <li>Antiinflamatorio natural</li>
+                <li>Salud articular</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Piña</h3>
+            <span class="product-price">$1.500/unidad</span>
+          </div>
+        </div>
+
+        <!-- Limón -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/frutas/limon.png" alt="Limón" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍋</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina B6, Vitamina A</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Magnesio, Calcio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Desintoxicación del cuerpo</li>
+                <li>Mejora la digestión</li>
+                <li>Alcaliniza el organismo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Limón</h3>
+            <span class="product-price">$600/kg</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #4CAF50;">🥬 Verduras</h3>
+      <div class="products-grid">
+        <!-- Tomate -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/verduras/tomate.png" alt="Tomate" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍅</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina A, Vitamina K</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Fósforo, Magnesio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Salud cardiovascular</li>
+                <li>Protección de la próstata</li>
+                <li>Salud de la piel</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tomate</h3>
+            <span class="product-price">$1.100/kg</span>
+          </div>
+        </div>
+
+        <!-- Espinaca -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/verduras/espinaca.png" alt="Espinaca" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥬</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina K, Vitamina A, Vitamina C, Folato</p>
+              <h5>🌿 Minerales</h5>
+              <p>Hierro, Magnesio, Calcio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Combate la anemia</li>
+                <li>Fortalece los huesos</li>
+                <li>Mejora la salud ocular</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Espinaca</h3>
+            <span class="product-price">$800/atado</span>
+          </div>
+        </div>
+
+        <!-- Zanahoria -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/verduras/zanahoria.png" alt="Zanahoria" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥕</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina A, Vitamina K, Vitamina C</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Fósforo, Magnesio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Mejora la visión</li>
+                <li>Salud de la piel</li>
+                <li>Fortalece el sistema inmunológico</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Zanahoria</h3>
+            <span class="product-price">$700/kg</span>
+          </div>
+        </div>
+
+        <!-- Brócoli -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/verduras/brocoli.png" alt="Brócoli" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥦</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina C, Vitamina K, Folato</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Calcio, Selenio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Propiedades anti-cancerígenas</li>
+                <li>Desintoxicación hepática</li>
+                <li>Sistema inmunológico fuerte</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Brócoli</h3>
+            <span class="product-price">$1.300/kg</span>
+          </div>
+        </div>
+
+        <!-- Lechuga -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/verduras/lechuga.png" alt="Lechuga" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥬</text></svg>'">
+            <div class="product-overlay">
+              <h4>Información Nutricional</h4>
+              <h5>✨ Vitaminas</h5>
+              <p>Vitamina A, Vitamina K, Vitamina C</p>
+              <h5>🌿 Minerales</h5>
+              <p>Potasio, Calcio, Magnesio</p>
+              <h5>💚 Beneficios Físicos</h5>
+              <ul>
+                <li>Hidratación profunda</li>
+                <li>Mejora la digestión</li>
+                <li>Control de peso</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Lechuga</h3>
+            <span class="product-price">$600/unidad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nutracepticos Section -->
+  <section id="nutracepticos" class="section nutracepticos-section">
+    <div class="container">
+      <h2 class="section-title">💊 Nutracépticos</h2>
+      <p class="section-subtitle">Suplementos naturales de la más alta calidad para complementar tu alimentación y potenciar tu bienestar.</p>
+
+      <div class="products-grid">
+        <!-- Multivitamínico -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/nutracepticos/vitaminas.png" alt="Multivitamínico" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>💊</text></svg>'">
+            <div class="product-overlay">
+              <h4>Multivitamínico Natural</h4>
+              <h5>✨ Contiene</h5>
+              <p>Vitaminas A, B, C, D, E + Minerales</p>
+              <h5>💚 Beneficios</h5>
+              <ul>
+                <li>Energía general</li>
+                <li>Sistema inmunológico fuerte</li>
+                <li>Vitalidad diaria</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Multivitamínico Natural</h3>
+            <span class="product-price">$4.500</span>
+          </div>
+        </div>
+
+        <!-- Omega-3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/nutracepticos/omega3.png" alt="Omega-3" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🐟</text></svg>'">
+            <div class="product-overlay">
+              <h4>Omega-3 Premium</h4>
+              <h5>✨ Contiene</h5>
+              <p>EPA, DHA, Ácidos grasos esenciales</p>
+              <h5>💚 Beneficios</h5>
+              <ul>
+                <li>Salud cardiovascular</li>
+                <li>Mejora la memoria</li>
+                <li>Articulaciones flexibles</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Omega-3 Premium</h3>
+            <span class="product-price">$5.200</span>
+          </div>
+        </div>
+
+        <!-- Superfood -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/nutracepticos/superfood.png" alt="Superfood" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🥗</text></svg>'">
+            <div class="product-overlay">
+              <h4>Superfood Greens</h4>
+              <h5>✨ Contiene</h5>
+              <p>Spirulina, Chlorella, Clorofila, Probióticos</p>
+              <h5>💚 Beneficios</h5>
+              <ul>
+                <li>Desintoxicación profunda</li>
+                <li>Energía sostenida</li>
+                <li>Claridad mental</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Superfood Greens</h3>
+            <span class="product-price">$6.000</span>
+          </div>
+        </div>
+
+        <!-- Probióticos -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/nutracepticos/probioticos.png" alt="Probióticos" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🦠</text></svg>'">
+            <div class="product-overlay">
+              <h4>Probióticos Avanzados</h4>
+              <h5>✨ Contiene</h5>
+              <p>10 mil millones UFC, Prebióticos</p>
+              <h5>💚 Beneficios</h5>
+              <ul>
+                <li>Digestión óptima</li>
+                <li>Salud intestinal</li>
+                <li>Reduce la ansiedad</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Probióticos Avanzados</h3>
+            <span class="product-price">$4.800</span>
+          </div>
+        </div>
+
+        <!-- Colágeno -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="productos/nutracepticos/colageno.png" alt="Colágeno" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>✨</text></svg>'">
+            <div class="product-overlay">
+              <h4>Colágeno Hidrolizado</h4>
+              <h5>✨ Contiene</h5>
+              <p>Colágeno tipo I y III, Ácido hialurónico</p>
+              <h5>💚 Beneficios</h5>
+              <ul>
+                <li>Piel radiante</li>
+                <li>Cabello fuerte</li>
+                <li>Articulaciones flexibles</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Colágeno Hidrolizado</h3>
+            <span class="product-price">$7.500</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recetas Section -->
+  <section id="recetas" class="section recetas-section">
+    <div class="container">
+      <h2 class="section-title">🍳 Recetas Saludables</h2>
+      <p class="section-subtitle">Preparaciones deliciosas con nuestros productos frescos. Cada receta incluye información sobre los beneficios para tu salud.</p>
+
+      <div class="products-grid">
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/smoothie-bowl.png" alt="Smoothie Bowl" onerror="this.parentElement.style.background='linear-gradient(135deg, #facc15 0%, #f97316 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">10 min</span>
+              <span class="badge badge-orange">Fácil</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Smoothie Bowl Energizante</h3>
+            <p class="combo-desc">Banana, Frutilla, Uvas</p>
+            <div class="patologias">
+              <span class="badge">Ideal para diabetes</span>
+              <span class="badge">Hipertensión</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/ensalada.png" alt="Ensalada Detox" onerror="this.parentElement.style.background='linear-gradient(135deg, #22c55e 0%, #16a34a 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">15 min</span>
+              <span class="badge badge-orange">Fácil</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Ensalada Detox Verde</h3>
+            <p class="combo-desc">Lechuga, Espinaca, Tomate, Zanahoria, Palta, Limón</p>
+            <div class="patologias">
+              <span class="badge">Adelgazamiento</span>
+              <span class="badge">Digestivos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/jugo-detox.png" alt="Jugo Detox" onerror="this.parentElement.style.background='linear-gradient(135deg, #f97316 0%, #ea580c 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">10 min</span>
+              <span class="badge badge-orange">Fácil</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Jugo Detox Naranja</h3>
+            <p class="combo-desc">Naranja, Zanahoria, Limón</p>
+            <div class="patologias">
+              <span class="badge">Anemia</span>
+              <span class="badge">Visión</span>
+              <span class="badge">Inmunológico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/sopa-verduras.png" alt="Sopa de Verduras" onerror="this.parentElement.style.background='linear-gradient(135deg, #84cc16 0%, #65a30d 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">30 min</span>
+              <span class="badge badge-orange">Media</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Sopa de Verduras Curativa</h3>
+            <p class="combo-desc">Brócoli, Zanahoria, Tomate, Espinaca</p>
+            <div class="patologias">
+              <span class="badge">Resfríos</span>
+              <span class="badge">Convalecencias</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/acai-bowl.png" alt="Açaí Bowl" onerror="this.parentElement.style.background='linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">10 min</span>
+              <span class="badge badge-orange">Fácil</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Açaí Bowl Antioxidante</h3>
+            <p class="combo-desc">Banana, Frutilla, Uvas</p>
+            <div class="patologias">
+              <span class="badge">Antienvejecimiento</span>
+              <span class="badge">Piel radiante</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receta-card">
+          <div class="receta-image">
+            <img src="recetas/te-herbal.png" alt="Té Herbal" onerror="this.parentElement.style.background='linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)'">
+            <div class="receta-badges">
+              <span class="badge" style="background: #4CAF50; color: white;">15 min</span>
+              <span class="badge badge-orange">Fácil</span>
+            </div>
+          </div>
+          <div class="receta-info">
+            <h3 class="combo-title">Té Herbal Relajante</h3>
+            <p class="combo-desc">Limón, Naranja</p>
+            <div class="patologias">
+              <span class="badge">Insomnio</span>
+              <span class="badge">Ansiedad</span>
+              <span class="badge">Estrés</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section blog-section">
+    <div class="container">
+      <h2 class="section-title">📚 Blog de Salud</h2>
+      <p class="section-subtitle">Tips, consejos e información sobre nutrición para una vida más saludable.</p>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="productos/frutas/frutilla.png" alt="Beneficios de Frutas" onerror="this.parentElement.style.background='linear-gradient(135deg, #f43f5e 0%, #ec4899 100%)'">
+          </div>
+          <div class="blog-info">
+            <p class="blog-meta">15 Enero 2025 • Dra. María González</p>
+            <h3 class="blog-title">Los Increíbles Beneficios de Consumir Frutas Diariamente</h3>
+            <p class="blog-excerpt">Descubre cómo las frutas pueden transformar tu salud y bienestar con sus propiedades únicas.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="productos/verduras/brocoli.png" alt="Sistema Inmunológico" onerror="this.parentElement.style.background='linear-gradient(135deg, #22c55e 0%, #16a34a 100%)'">
+          </div>
+          <div class="blog-info">
+            <p class="blog-meta">12 Enero 2025 • Lic. Carlos Pérez</p>
+            <h3 class="blog-title">Verduras que Fortalecen tu Sistema Inmunológico</h3>
+            <p class="blog-excerpt">Aprende cuáles son las verduras más poderosas para mantener tu cuerpo protegido.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="productos/nutracepticos/superfood.png" alt="Nutracépticos" onerror="this.parentElement.style.background='linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)'">
+          </div>
+          <div class="blog-info">
+            <p class="blog-meta">10 Enero 2025 • Dr. Roberto Fernández</p>
+            <h3 class="blog-title">Guía Completa de Nutracépticos: ¿Cuál Necesitas?</h3>
+            <p class="blog-excerpt">Todo lo que debes saber sobre suplementos naturales y cómo elegir el indicado para ti.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="recetas/smoothie-bowl.png" alt="Recetas Saludables" onerror="this.parentElement.style.background='linear-gradient(135deg, #f97316 0%, #ea580c 100%)'">
+          </div>
+          <div class="blog-info">
+            <p class="blog-meta">8 Enero 2025 • Chef Ana Martínez</p>
+            <h3 class="blog-title">5 Recetas Fáciles para una Alimentación Saludable</h3>
+            <p class="blog-excerpt">Deliciosas preparaciones que puedes hacer con ingredientes frescos de NUTRETE.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h4>🌿 NUTRETE</h4>
+        <p style="color: #d1d5db; margin-bottom: 1rem;">Frutas, verduras y nutracépticos frescos del Mercado Central para tu bienestar.</p>
+        <p style="color: #6b7280; font-size: 0.875rem;">📍 Esteban Echeverría, Ezeiza, Canning<br>Buenos Aires, Argentina</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="#combos">Combos Especiales</a>
+        <a href="#productos">Frutas y Verduras</a>
+        <a href="#nutracepticos">Nutracépticos</a>
+        <a href="#recetas">Recetas</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491130162232" target="_blank">📱 WhatsApp: 11 3016-2232</a>
+        <a href="https://instagram.com/nutrete" target="_blank">📷 Instagram: @nutrete</a>
+        <a href="https://facebook.com/nutrete" target="_blank">👤 Facebook: /nutrete</a>
+      </div>
+      <div>
+        <h4>Horarios de Entrega</h4>
+        <p style="color: #d1d5db; font-size: 0.875rem;">
+          📦 Pedidos antes de las 11:00 AM<br>
+          → Entrega el mismo día<br><br>
+          📦 Pedidos después de las 11:00 AM<br>
+          → Entrega al día siguiente
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NUTRETE - Todos los derechos reservados | Hecho con 💚 en Buenos Aires, Argentina</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5491130162232?text=Hola! Quiero hacer un pedido" target="_blank" class="whatsapp-float">
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</body>
+</html>
