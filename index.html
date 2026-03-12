@@ -61,7 +61,11 @@
       justify-content: space-between;
     }
 
-    .logo { display: flex; align-items: center; gap: 0.5rem; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
     .logo-text {
       font-size: 1.4rem;
@@ -72,7 +76,11 @@
       background-clip: text;
     }
 
-    .header-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .header-badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
 
     .badge {
       display: inline-flex;
@@ -84,8 +92,15 @@
       font-weight: 600;
     }
 
-    .badge-green { background: rgba(57, 255, 20, 0.15); color: #2e7d32; }
-    .badge-orange { background: rgba(255, 107, 53, 0.15); color: #e65100; }
+    .badge-green {
+      background: rgba(57, 255, 20, 0.15);
+      color: #2e7d32;
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.15);
+      color: #e65100;
+    }
 
     .whatsapp-btn {
       display: flex;
@@ -109,7 +124,12 @@
     .hero {
       min-height: auto;
       padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, rgba(57, 255, 20, 0.08) 0%, rgba(76, 175, 80, 0.08) 25%, rgba(255, 107, 53, 0.04) 50%, rgba(255, 215, 0, 0.04) 100%);
+      background: linear-gradient(135deg, 
+        rgba(57, 255, 20, 0.08) 0%, 
+        rgba(76, 175, 80, 0.08) 25%, 
+        rgba(255, 107, 53, 0.04) 50%, 
+        rgba(255, 215, 0, 0.04) 100%
+      );
       position: relative;
       overflow: hidden;
     }
@@ -136,7 +156,12 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
 
     .hero h1 span {
       background: linear-gradient(135deg, #39FF14 0%, #4CAF50 50%, #FF6B35 100%);
@@ -145,7 +170,12 @@
       background-clip: text;
     }
 
-    .hero p { font-size: 1.1rem; color: #6b7280; margin-bottom: 1rem; max-width: 500px; }
+    .hero p {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 1rem;
+      max-width: 500px;
+    }
 
     .hero-promo {
       background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
@@ -155,8 +185,15 @@
       margin-bottom: 1rem;
     }
 
-    .hero-promo strong { color: #2e7d32; }
-    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-promo strong {
+      color: #2e7d32;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
     .btn {
       display: inline-flex;
@@ -183,12 +220,33 @@
       box-shadow: 0 8px 25px rgba(57, 255, 20, 0.5);
     }
 
-    .btn-outline { background: white; color: #2e7d32; border: 2px solid #4CAF50; }
-    .btn-outline:hover { background: rgba(76, 175, 80, 0.1); }
+    .btn-outline {
+      background: white;
+      color: #2e7d32;
+      border: 2px solid #4CAF50;
+    }
 
-    .hero-info { display: flex; gap: 2rem; margin-top: 1rem; color: #6b7280; font-size: 0.8rem; }
-    .hero-info-item { display: flex; align-items: center; gap: 0.5rem; }
-    .hero-image { position: relative; }
+    .btn-outline:hover {
+      background: rgba(76, 175, 80, 0.1);
+    }
+
+    .hero-info {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    .hero-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-image {
+      position: relative;
+    }
 
     .hero-image img {
       width: 100%;
@@ -197,7 +255,9 @@
       object-fit: cover;
     }
 
-    .section { padding: 3rem 1rem; }
+    .section {
+      padding: 3rem 1rem;
+    }
 
     .section-title {
       font-size: 2rem;
@@ -218,7 +278,96 @@
       font-size: 0.95rem;
     }
 
-    .container { max-width: 1400px; margin: 0 auto; }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .category-section {
+      padding: 2rem 1rem;
+      background: linear-gradient(180deg, rgba(255, 107, 53, 0.03) 0%, rgba(57, 255, 20, 0.03) 100%);
+    }
+
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      border-radius: 1rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 3px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::after {
+      content: '▼';
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .category-btn.active::after {
+      transform: rotate(180deg);
+    }
+
+    .category-btn-frutas {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF4500 100%);
+      color: white;
+      box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+      border-color: #FF6B35;
+    }
+
+    .category-btn-frutas:hover,
+    .category-btn-frutas.active {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(255, 107, 53, 0.6);
+    }
+
+    .category-btn-verduras {
+      background: linear-gradient(135deg, #39FF14 0%, #32CD32 100%);
+      color: #1a1a1a;
+      box-shadow: 0 8px 30px rgba(57, 255, 20, 0.4);
+      border-color: #39FF14;
+    }
+
+    .category-btn-verduras:hover,
+    .category-btn-verduras.active {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(57, 255, 20, 0.6);
+    }
+
+    .category-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .category-content.active {
+      max-height: 5000px;
+      opacity: 1;
+      transition: max-height 0.8s ease-in, opacity 0.3s ease;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #4CAF50;
+      text-align: center;
+    }
 
     .products-grid {
       display: grid;
@@ -250,8 +399,16 @@
       overflow: hidden;
     }
 
-    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .product-card:hover .product-image img { transform: scale(1.1); }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
 
     .product-overlay {
       position: absolute;
@@ -264,14 +421,44 @@
       color: white;
     }
 
-    .product-card:hover .product-overlay { opacity: 1; }
-    .product-overlay h4 { font-size: 1rem; color: #39FF14; margin-bottom: 1rem; }
-    .product-overlay h5 { font-size: 0.875rem; color: #4CAF50; margin: 0.75rem 0 0.25rem; }
-    .product-overlay p { font-size: 0.75rem; color: #d1d5db; margin-bottom: 0.5rem; }
-    .product-overlay ul { font-size: 0.75rem; color: #d1d5db; margin-left: 1rem; }
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
 
-    .product-info { padding: 1.5rem; }
-    .product-name { font-size: 1.125rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; }
+    .product-overlay h4 {
+      font-size: 1rem;
+      color: #39FF14;
+      margin-bottom: 1rem;
+    }
+
+    .product-overlay h5 {
+      font-size: 0.875rem;
+      color: #4CAF50;
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .product-overlay p {
+      font-size: 0.75rem;
+      color: #d1d5db;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-overlay ul {
+      font-size: 0.75rem;
+      color: #d1d5db;
+      margin-left: 1rem;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
 
     .product-price {
       display: inline-block;
@@ -283,7 +470,9 @@
       font-size: 0.875rem;
     }
 
-    .combos-section { background: linear-gradient(180deg, rgba(57, 255, 20, 0.05) 0%, white 100%); }
+    .combos-section {
+      background: linear-gradient(180deg, rgba(57, 255, 20, 0.05) 0%, white 100%);
+    }
 
     .combo-card {
       background: white;
@@ -293,7 +482,10 @@
       transition: all 0.3s;
     }
 
-    .combo-card:hover { border-color: #39FF14; box-shadow: 0 10px 40px rgba(57, 255, 20, 0.2); }
+    .combo-card:hover {
+      border-color: #39FF14;
+      box-shadow: 0 10px 40px rgba(57, 255, 20, 0.2);
+    }
 
     .combo-image {
       aspect-ratio: 16/9;
@@ -302,22 +494,106 @@
       overflow: hidden;
     }
 
-    .combo-image img { width: 100%; height: 100%; object-fit: cover; }
+    .combo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .combo-badges { position: absolute; top: 1rem; left: 1rem; display: flex; gap: 0.5rem; }
-    .combo-badges .badge { background: #4CAF50; color: white; }
-    .combo-badges .badge-orange { background: #FF6B35; }
+    .combo-badges {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
 
-    .combo-info { padding: 1.5rem; }
-    .combo-title { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; }
-    .combo-desc { color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; }
-    .combo-products { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
-    .combo-products .badge { background: rgba(57, 255, 20, 0.1); color: #2e7d32; font-size: 0.75rem; }
-    .combo-price { font-size: 1.5rem; font-weight: 800; color: #4CAF50; }
-    .combo-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+    .combo-badges .badge {
+      background: #4CAF50;
+      color: white;
+    }
 
-    .nutracepticos-section { background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, white 100%); }
-    .recetas-section { background: linear-gradient(180deg, rgba(255, 107, 53, 0.05) 0%, white 100%); }
+    .combo-badges .badge-orange {
+      background: #FF6B35;
+    }
+
+    .combo-info {
+      padding: 1.5rem;
+    }
+
+    .combo-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .combo-desc {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .combo-products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .combo-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(57, 255, 20, 0.12);
+      color: #1a1a1a;
+      border: 1px solid rgba(57, 255, 20, 0.3);
+    }
+
+    .combo-item .unit {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      margin-left: 0.25rem;
+    }
+
+    .combo-item .unit.kg {
+      background: #FF6B35;
+      color: white;
+    }
+
+    .combo-item .unit.unit {
+      background: #8B5CF6;
+      color: white;
+    }
+
+    .combo-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4CAF50;
+    }
+
+    .combo-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .nutracepticos-section {
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, white 100%);
+    }
+
+    .recetas-section {
+      background: linear-gradient(180deg, rgba(255, 107, 53, 0.05) 0%, white 100%);
+    }
 
     .receta-card {
       background: white;
@@ -333,13 +609,32 @@
       overflow: hidden;
     }
 
-    .receta-image img { width: 100%; height: 100%; object-fit: cover; }
-    .receta-info { padding: 1.5rem; }
+    .receta-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .patologias { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .patologias .badge { border: 1px solid #8b5cf6; color: #8b5cf6; background: transparent; }
+    .receta-info {
+      padding: 1.5rem;
+    }
 
-    .blog-section { background: white; }
+    .patologias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .patologias .badge {
+      border: 1px solid #8b5cf6;
+      color: #8b5cf6;
+      background: transparent;
+    }
+
+    .blog-section {
+      background: white;
+    }
 
     .blog-grid {
       display: grid;
@@ -355,7 +650,10 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12); }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    }
 
     .blog-image {
       aspect-ratio: 16/9;
@@ -363,13 +661,39 @@
       overflow: hidden;
     }
 
-    .blog-image img { width: 100%; height: 100%; object-fit: cover; }
-    .blog-info { padding: 1.5rem; }
-    .blog-meta { font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.5rem; }
-    .blog-title { font-size: 1rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; }
-    .blog-excerpt { font-size: 0.875rem; color: #6b7280; }
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .footer { background: #1a1a1a; color: white; padding: 2.5rem 1rem 1.5rem; }
+    .blog-info {
+      padding: 1.5rem;
+    }
+
+    .blog-meta {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-excerpt {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    .footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 2.5rem 1rem 1.5rem;
+    }
 
     .footer-content {
       max-width: 1400px;
@@ -379,7 +703,10 @@
       gap: 2rem;
     }
 
-    .footer h4 { color: #39FF14; margin-bottom: 1.5rem; }
+    .footer h4 {
+      color: #39FF14;
+      margin-bottom: 1.5rem;
+    }
 
     .footer a {
       color: #d1d5db;
@@ -389,7 +716,9 @@
       transition: color 0.3s;
     }
 
-    .footer a:hover { color: #39FF14; }
+    .footer a:hover {
+      color: #39FF14;
+    }
 
     .footer-bottom {
       max-width: 1400px;
@@ -417,32 +746,110 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
-    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
 
     @media (max-width: 968px) {
-      .hero-content { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { font-size: 2rem; }
-      .hero-buttons { justify-content: center; }
-      .hero-info { justify-content: center; flex-wrap: wrap; gap: 1rem; }
-      .hero-image { max-width: 400px; margin: 0 auto; }
-      .header-badges { display: none; }
-      .section-title { font-size: 1.6rem; }
-      .products-grid { gap: 1rem; }
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-info {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .hero-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .header-badges {
+        display: none;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+      
+      .products-grid {
+        gap: 1rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.95rem; }
-      .btn { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
-      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-      .section { padding: 2rem 0.75rem; }
-      .section-title { font-size: 1.4rem; }
-      .whatsapp-btn span { display: none; }
-      .logo-text { font-size: 1.2rem; }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+      
+      .section {
+        padding: 2rem 0.75rem;
+      }
+      
+      .section-title {
+        font-size: 1.4rem;
+      }
+
+      .whatsapp-btn span {
+        display: none;
+      }
+      
+      .logo-text {
+        font-size: 1.2rem;
+      }
+
+      .category-buttons {
+        flex-direction: row;
+        gap: 0.75rem;
+      }
+
+      .category-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .combo-item {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.6rem;
+      }
+
+      .combo-item .unit {
+        font-size: 0.6rem;
+      }
     }
 
-    /* Neon Navigation Menu */
     .nav-menu {
       position: fixed;
       top: 60px;
@@ -464,10 +871,13 @@
       gap: 0.5rem;
       flex-wrap: nowrap;
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
 
-    .nav-container::-webkit-scrollbar { display: none; }
+    .nav-container::-webkit-scrollbar {
+      display: none;
+    }
 
     .nav-btn {
       display: inline-flex;
@@ -499,7 +909,9 @@
       transition: left 0.5s;
     }
 
-    .nav-btn:hover::before { left: 100%; }
+    .nav-btn:hover::before {
+      left: 100%;
+    }
 
     .nav-btn-combos {
       background: linear-gradient(135deg, #39FF14 0%, #32CD32 100%);
@@ -562,18 +974,39 @@
     }
 
     @media (max-width: 768px) {
-      .nav-menu { top: 55px; padding: 0.35rem 0.25rem; }
-      .nav-container { gap: 0.25rem; padding: 0 0.25rem; }
-      .nav-btn { padding: 0.4rem 0.6rem; font-size: 0.6rem; border-width: 1px; }
-      .nav-btn::before { display: none; }
+      .nav-menu {
+        top: 55px;
+        padding: 0.35rem 0.25rem;
+      }
+
+      .nav-container {
+        gap: 0.25rem;
+        padding: 0 0.25rem;
+      }
+
+      .nav-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.6rem;
+        border-width: 1px;
+      }
+
+      .nav-btn::before {
+        display: none;
+      }
     }
 
-    body { padding-top: 105px; }
-    @media (max-width: 768px) { body { padding-top: 95px; } }
+    body {
+      padding-top: 105px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 95px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="header-content">
       <div class="logo">
@@ -593,48 +1026,404 @@
     </div>
   </header>
 
-  <!-- Neon Navigation Menu -->
   <nav class="nav-menu">
     <div class="nav-container">
       <a href="#combos" class="nav-btn nav-btn-combos">🎁 COMBOS</a>
-      <a href="#productos" class="nav-btn nav-btn-frutas">🍎 FRUTAS Y VERDURAS</a>
+      <a href="#categorias" class="nav-btn nav-btn-frutas">🍎 FRUTAS Y VERDURAS</a>
       <a href="#nutracepticos" class="nav-btn nav-btn-nutracepticos">💊 NUTRACÉPTICOS</a>
       <a href="#recetas" class="nav-btn nav-btn-recetas">🍳 RECETAS</a>
       <a href="#blog" class="nav-btn nav-btn-blog">📚 BLOG</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <div>
         <span class="hero-badge">🌱 Directo del Productor a tu Mesa</span>
         <h1>Frutas y Verduras<br><span>100% Frescas</span></h1>
         <p>Traemos lo mejor del <strong>Mercado Central</strong> directo a tu hogar. Productos naturales, recetas saludables y nutracépticos para tu bienestar.</p>
+        
         <div class="hero-promo">
           <p><strong>🎁 ¡Envío GRATIS en combos desde $40.000!</strong></p>
           <p style="font-size: 0.875rem; margin-top: 0.5rem;">Armá tu combo personal o elegí uno de nuestros combos especiales.</p>
         </div>
+
         <div class="hero-buttons">
           <a href="#combos" class="btn btn-primary">📦 Ver Combos</a>
-          <a href="#productos" class="btn btn-outline">🥬 Ver Productos</a>
+          <a href="#categorias" class="btn btn-outline">🥬 Ver Productos</a>
         </div>
+
         <div class="hero-info">
-          <div class="hero-info-item"><span>📍</span><span>Esteban Echeverría, Ezeiza, Canning</span></div>
-          <div class="hero-info-item"><span>⏰</span><span>Entrega hoy o mañana</span></div>
+          <div class="hero-info-item">
+            <span>📍</span>
+            <span>Esteban Echeverría, Ezeiza, Canning</span>
+          </div>
+          <div class="hero-info-item">
+            <span>⏰</span>
+            <span>Entrega hoy o mañana</span>
+          </div>
         </div>
       </div>
+
       <div class="hero-image">
         <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80" alt="Frutas y verduras frescas">
       </div>
     </div>
   </section>
 
-  <!-- Combos Section -->
+  <section id="categorias" class="category-section">
+    <div class="container">
+      <h2 class="section-title">🍎 Frutas y Verduras</h2>
+      <p class="section-subtitle">Seleccioná una categoría para ver nuestros productos disponibles con precios del Mercado Central.</p>
+      
+      <div class="category-buttons">
+        <button class="category-btn category-btn-frutas" onclick="toggleCategory('frutas')">
+          🍎 FRUTAS
+        </button>
+        <button class="category-btn category-btn-verduras" onclick="toggleCategory('verduras')">
+          🥬 VERDURAS
+        </button>
+      </div>
+
+      <div id="frutas-content" class="category-content">
+        <h3 class="category-title">🍎 Frutas Disponibles</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500&q=80" alt="Manzana">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina A, Vitamina E</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Magnesio, Fósforo</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Mejora la salud cardiovascular</li>
+                  <li>Regula el azúcar en sangre</li>
+                  <li>Fortalece el sistema inmunológico</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Manzana</h3>
+              <span class="product-price">$6.590/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500&q=80" alt="Banana">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina B6, Vitamina C, Folato</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Magnesio, Manganeso</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Aporta energía rápida</li>
+                  <li>Mejora la función muscular</li>
+                  <li>Regula la presión arterial</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Banana</h3>
+              <span class="product-price">$2.430/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500&q=80" alt="Naranja">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina A, Tiamina</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Calcio, Fósforo</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Fortalece el sistema inmunológico</li>
+                  <li>Mejora la digestión</li>
+                  <li>Promueve la salud de la piel</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Naranja</h3>
+              <span class="product-price">$3.800/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?w=500&q=80" alt="Limón">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina B6</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Magnesio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Detoxificación natural</li>
+                  <li>Mejora la digestión</li>
+                  <li>Fortalece el sistema inmunológico</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Limón</h3>
+              <span class="product-price">$3.530/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=500&q=80" alt="Frutilla">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina K, Folato</p>
+                <h5>🌿 Minerales</h5>
+                <p>Manganeso, Potasio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Alto contenido de antioxidantes</li>
+                  <li>Mejora la salud del corazón</li>
+                  <li>Regula el azúcar en sangre</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Frutilla</h3>
+              <span class="product-price">$12.690/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=500&q=80" alt="Uva">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina K</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Cobre</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Antioxidantes poderosos</li>
+                  <li>Mejora la salud cardíaca</li>
+                  <li>Protege contra el envejecimiento</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Uva</h3>
+              <span class="product-price">$6.580/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500&q=80" alt="Palta">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina K, Vitamina C, Vitamina E</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Magnesio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Grasas saludables para el corazón</li>
+                  <li>Mejora la absorción de nutrientes</li>
+                  <li>Favorece la salud ocular</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Palta</h3>
+              <span class="product-price">$9.340/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?w=500&q=80" alt="Pera">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina K</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Cobre</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Mejora la digestión</li>
+                  <li>Reduce la inflamación</li>
+                  <li>Controla el azúcar en sangre</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Pera</h3>
+              <span class="product-price">$4.500/kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="verduras-content" class="category-content">
+        <h3 class="category-title">🥬 Verduras Disponibles</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1546470427-227c7369a9b9?w=500&q=80" alt="Tomate">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina K, Vitamina A</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Fósforo</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Rico en licopeno (anticancerígeno)</li>
+                  <li>Mejora la salud del corazón</li>
+                  <li>Protege la piel del sol</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tomate</h3>
+              <span class="product-price">$1.370/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500&q=80" alt="Zanahoria">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina A, Vitamina K, Vitamina C</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Calcio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Mejora la visión</li>
+                  <li>Fortalece el sistema inmunológico</li>
+                  <li>Promueve la salud de la piel</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Zanahoria</h3>
+              <span class="product-price">$1.630/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=500&q=80" alt="Lechuga">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina A, Vitamina K, Vitamina C</p>
+                <h5>🌿 Minerales</h5>
+                <p>Hierro, Calcio, Potasio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Hidratación natural</li>
+                  <li>Mejora la digestión</li>
+                  <li>Bajo en calorías</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lechuga</h3>
+              <span class="product-price">$2.040/unidad</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500&q=80" alt="Brócoli">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina K, Vitamina A</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Fósforo, Selenio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Anticancerígeno natural</li>
+                  <li>Detoxificación del hígado</li>
+                  <li>Mejora la digestión</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Brócoli</h3>
+              <span class="product-price">$3.440/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80" alt="Espinaca">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina K, Vitamina A, Vitamina C</p>
+                <h5>🌿 Minerales</h5>
+                <p>Hierro, Magnesio, Calcio</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Rico en hierro</li>
+                  <li>Mejora la salud ósea</li>
+                  <li>Controla el azúcar en sangre</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Espinaca</h3>
+              <span class="product-price">$4.910/kg</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=500&q=80" alt="Cebolla">
+              <div class="product-overlay">
+                <h4>Información Nutricional</h4>
+                <h5>✨ Vitaminas</h5>
+                <p>Vitamina C, Vitamina B6</p>
+                <h5>🌿 Minerales</h5>
+                <p>Potasio, Manganeso</p>
+                <h5>💚 Beneficios Físicos</h5>
+                <ul>
+                  <li>Antibacteriano natural</li>
+                  <li>Mejora la salud del corazón</li>
+                  <li>Antiinflamatorio</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cebolla</h3>
+              <span class="product-price">$650/kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="combos" class="section combos-section">
     <div class="container">
       <h2 class="section-title">🎁 Combos Especiales</h2>
       <p class="section-subtitle">Elegí uno de nuestros combos armados y <strong>ahorrá dinero</strong> con <strong style="color: #4CAF50;">envío sin costo</strong>. Todos incluyen productos frescos del Mercado Central.</p>
+
       <div class="products-grid">
         <div class="combo-card">
           <div class="combo-image">
@@ -648,7 +1437,14 @@
             <h3 class="combo-title">Combo Familiar Completo</h3>
             <p class="combo-desc">Ideal para una familia de 4 personas. Incluye frutas y verduras para toda la semana.</p>
             <div class="combo-products">
-              <span class="badge">Manzana x3</span><span class="badge">Banana x3</span><span class="badge">Naranja x3</span><span class="badge">Tomate x2</span><span class="badge">+4 más</span>
+              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Banana <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Tomate <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Lechuga <span class="unit unit">2 unid.</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">1 kg</span></span>
+              <span class="combo-item">Limón <span class="unit kg">1 kg</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$39.800</span>
@@ -669,7 +1465,13 @@
             <h3 class="combo-title">Combo Detox & Bienestar</h3>
             <p class="combo-desc">Perfecto para limpiar tu organismo. Frutas y verduras detoxificantes.</p>
             <div class="combo-products">
-              <span class="badge">Naranja x5</span><span class="badge">Limón x3</span><span class="badge">Zanahoria x3</span><span class="badge">Espinaca x3</span><span class="badge">+3 más</span>
+              <span class="combo-item">Naranja <span class="unit kg">5 kg</span></span>
+              <span class="combo-item">Limón <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Espinaca <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Apio <span class="unit unit">2 unid.</span></span>
+              <span class="combo-item">Jengibre <span class="unit unit">3 unid.</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$40.500</span>
@@ -690,7 +1492,12 @@
             <h3 class="combo-title">Combo Energía Vital</h3>
             <p class="combo-desc">Frutas energéticas para empezar el día con toda la fuerza.</p>
             <div class="combo-products">
-              <span class="badge">Banana x5</span><span class="badge">Manzana x3</span><span class="badge">Naranja x3</span><span class="badge">Frutilla x2</span><span class="badge">+2 más</span>
+              <span class="combo-item">Banana <span class="unit kg">5 kg</span></span>
+              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Frutilla <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Uva <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Miel <span class="unit unit">1 unid.</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$41.200</span>
@@ -711,7 +1518,12 @@
             <h3 class="combo-title">Combo Verduras Frescas</h3>
             <p class="combo-desc">Todas las verduras que necesitas para cocinar sano toda la semana.</p>
             <div class="combo-products">
-              <span class="badge">Tomate x4</span><span class="badge">Lechuga x3</span><span class="badge">Zanahoria x3</span><span class="badge">Brócoli x3</span><span class="badge">+2 más</span>
+              <span class="combo-item">Tomate <span class="unit kg">4 kg</span></span>
+              <span class="combo-item">Lechuga <span class="unit unit">3 unid.</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Cebolla <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Espinaca <span class="unit kg">1 kg</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$38.900</span>
@@ -732,7 +1544,12 @@
             <h3 class="combo-title">Combo Antioxidante Premium</h3>
             <p class="combo-desc">Frutas ricas en antioxidantes para combatir el envejecimiento.</p>
             <div class="combo-products">
-              <span class="badge">Frutilla x3</span><span class="badge">Uvas x3</span><span class="badge">Naranja x4</span><span class="badge">Limón x2</span><span class="badge">+2 más</span>
+              <span class="combo-item">Frutilla <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Uvas <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Naranja <span class="unit kg">4 kg</span></span>
+              <span class="combo-item">Limón <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Arándanos <span class="unit kg">1 kg</span></span>
+              <span class="combo-item">Granada <span class="unit unit">2 unid.</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$42.600</span>
@@ -753,7 +1570,12 @@
             <h3 class="combo-title">Combo Gourmet Saludable</h3>
             <p class="combo-desc">Ingredientes selectos para preparaciones especiales y gourmet.</p>
             <div class="combo-products">
-              <span class="badge">Palta x3</span><span class="badge">Brócoli x3</span><span class="badge">Tomate x3</span><span class="badge">Espinaca x3</span><span class="badge">+3 más</span>
+              <span class="combo-item">Palta <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Tomate <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Espinaca <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Rúcula <span class="unit unit">2 unid.</span></span>
+              <span class="combo-item">Pimiento <span class="unit kg">2 kg</span></span>
             </div>
             <div class="combo-footer">
               <span class="combo-price">$43.500</span>
@@ -765,236 +1587,34 @@
     </div>
   </section>
 
-  <!-- Productos Section -->
-  <section id="productos" class="section">
-    <div class="container">
-      <h2 class="section-title">🍎 Frutas y Verduras</h2>
-      <p class="section-subtitle">Del Mercado Central directo a tu mesa. Pasa el cursor sobre cada producto para ver información nutricional completa.</p>
-
-      <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #4CAF50;">🍎 Frutas</h3>
-      <div class="products-grid" style="margin-bottom: 3rem;">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500&q=80" alt="Manzana">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina A, Vitamina E</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Magnesio, Fósforo</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Mejora la salud cardiovascular</li><li>Regula el azúcar en sangre</li><li>Fortalece el sistema inmunológico</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Manzana</h3><span class="product-price">$6.590/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500&q=80" alt="Banana">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina B6, Vitamina C, Folato</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Magnesio, Manganeso</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Aporta energía rápida</li><li>Mejora la función muscular</li><li>Regula la presión arterial</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Banana</h3><span class="product-price">$2.430/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500&q=80" alt="Naranja">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina A, Tiamina</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Calcio, Fósforo</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Fortalece el sistema inmunológico</li><li>Mejora la digestión</li><li>Promueve la salud de la piel</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Naranja</h3><span class="product-price">$3.800/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?w=500&q=80" alt="Limón">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina B6</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Magnesio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Detoxificación natural</li><li>Mejora la digestión</li><li>Fortalece el sistema inmunológico</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Limón</h3><span class="product-price">$3.530/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=500&q=80" alt="Frutilla">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina K, Folato</p>
-              <h5>🌿 Minerales</h5><p>Manganeso, Potasio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Alto contenido de antioxidantes</li><li>Mejora la salud del corazón</li><li>Regula el azúcar en sangre</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Frutilla</h3><span class="product-price">$12.690/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=500&q=80" alt="Uva">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina K</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Cobre</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Antioxidantes poderosos</li><li>Mejora la salud cardíaca</li><li>Protege contra el envejecimiento</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Uva</h3><span class="product-price">$6.580/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500&q=80" alt="Palta">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina K, Vitamina C, Vitamina E</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Magnesio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Grasas saludables para el corazón</li><li>Mejora la absorción de nutrientes</li><li>Favorece la salud ocular</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Palta</h3><span class="product-price">$9.340/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?w=500&q=80" alt="Pera">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina K</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Cobre</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Mejora la digestión</li><li>Reduce la inflamación</li><li>Controla el azúcar en sangre</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Pera</h3><span class="product-price">$4.500/kg</span></div>
-        </div>
-      </div>
-
-      <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #4CAF50;">🥬 Verduras</h3>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1546470427-227c7369a9b9?w=500&q=80" alt="Tomate">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina K, Vitamina A</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Fósforo</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Rico en licopeno (anticancerígeno)</li><li>Mejora la salud del corazón</li><li>Protege la piel del sol</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Tomate</h3><span class="product-price">$1.370/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500&q=80" alt="Zanahoria">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina A, Vitamina K, Vitamina C</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Calcio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Mejora la visión</li><li>Fortalece el sistema inmunológico</li><li>Promueve la salud de la piel</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Zanahoria</h3><span class="product-price">$1.630/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=500&q=80" alt="Lechuga">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina A, Vitamina K, Vitamina C</p>
-              <h5>🌿 Minerales</h5><p>Hierro, Calcio, Potasio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Hidratación natural</li><li>Mejora la digestión</li><li>Bajo en calorías</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Lechuga</h3><span class="product-price">$2.040/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500&q=80" alt="Brócoli">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina K, Vitamina A</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Fósforo, Selenio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Anticancerígeno natural</li><li>Detoxificación del hígado</li><li>Mejora la digestión</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Brócoli</h3><span class="product-price">$3.440/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80" alt="Espinaca">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina K, Vitamina A, Vitamina C</p>
-              <h5>🌿 Minerales</h5><p>Hierro, Magnesio, Calcio</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Rico en hierro</li><li>Mejora la salud ósea</li><li>Controla el azúcar en sangre</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Espinaca</h3><span class="product-price">$4.910/kg</span></div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=500&q=80" alt="Cebolla">
-            <div class="product-overlay">
-              <h4>Información Nutricional</h4>
-              <h5>✨ Vitaminas</h5><p>Vitamina C, Vitamina B6</p>
-              <h5>🌿 Minerales</h5><p>Potasio, Manganeso</p>
-              <h5>💚 Beneficios Físicos</h5>
-              <ul><li>Antibacteriano natural</li><li>Mejora la salud del corazón</li><li>Antiinflamatorio</li></ul>
-            </div>
-          </div>
-          <div class="product-info"><h3 class="product-name">Cebolla</h3><span class="product-price">$650/kg</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Nutracepticos Section -->
   <section id="nutracepticos" class="section nutracepticos-section">
     <div class="container">
       <h2 class="section-title">💊 Nutracépticos</h2>
       <p class="section-subtitle">Suplementos naturales para complementar tu alimentación y mejorar tu bienestar. Productos de alta calidad seleccionados.</p>
+
       <div class="products-grid">
         <div class="product-card">
           <div class="product-image">
             <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=500&q=80" alt="Spirulina">
             <div class="product-overlay">
               <h4>Spirulina Orgánica</h4>
-              <h5>✨ Propiedades</h5><p>Superalimento rico en proteínas y clorofila</p>
+              <h5>✨ Propiedades</h5>
+              <p>Superalimento rico en proteínas y clorofila</p>
               <h5>💚 Beneficios</h5>
-              <ul><li>Aumenta la energía</li><li>Fortalece el sistema inmunológico</li><li>Detoxificación natural</li></ul>
+              <ul>
+                <li>Aumenta la energía</li>
+                <li>Fortalece el sistema inmunológico</li>
+                <li>Detoxificación natural</li>
+              </ul>
             </div>
           </div>
           <div class="product-info">
             <h3 class="product-name">Spirulina Orgánica</h3>
             <span class="product-price">$4.500/120 caps</span>
-            <div class="patologias"><span class="badge">Energía</span><span class="badge">Inmunidad</span></div>
+            <div class="patologias">
+              <span class="badge">Energía</span>
+              <span class="badge">Inmunidad</span>
+            </div>
           </div>
         </div>
 
@@ -1003,15 +1623,23 @@
             <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&q=80" alt="Cúrcuma">
             <div class="product-overlay">
               <h4>Cúrcuma + Bioperina</h4>
-              <h5>✨ Propiedades</h5><p>Antiinflamatorio natural con piperina para mejor absorción</p>
+              <h5>✨ Propiedades</h5>
+              <p>Antiinflamatorio natural con piperina para mejor absorción</p>
               <h5>💚 Beneficios</h5>
-              <ul><li>Reduce la inflamación</li><li>Antioxidante poderoso</li><li>Mejora las articulaciones</li></ul>
+              <ul>
+                <li>Reduce la inflamación</li>
+                <li>Antioxidante poderoso</li>
+                <li>Mejora las articulaciones</li>
+              </ul>
             </div>
           </div>
           <div class="product-info">
             <h3 class="product-name">Cúrcuma + Bioperina</h3>
             <span class="product-price">$3.800/60 caps</span>
-            <div class="patologias"><span class="badge">Antiinflamatorio</span><span class="badge">Articulaciones</span></div>
+            <div class="patologias">
+              <span class="badge">Antiinflamatorio</span>
+              <span class="badge">Articulaciones</span>
+            </div>
           </div>
         </div>
 
@@ -1020,26 +1648,34 @@
             <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80" alt="Omega 3">
             <div class="product-overlay">
               <h4>Omega 3 Premium</h4>
-              <h5>✨ Propiedades</h5><p>Ácidos grasos EPA y DHA de pescado de aguas profundas</p>
+              <h5>✨ Propiedades</h5>
+              <p>Ácidos grasos EPA y DHA de pescado de aguas profundas</p>
               <h5>💚 Beneficios</h5>
-              <ul><li>Salud cardiovascular</li><li>Mejora la función cerebral</li><li>Reduce triglicéridos</li></ul>
+              <ul>
+                <li>Salud cardiovascular</li>
+                <li>Mejora la función cerebral</li>
+                <li>Reduce triglicéridos</li>
+              </ul>
             </div>
           </div>
           <div class="product-info">
             <h3 class="product-name">Omega 3 Premium</h3>
             <span class="product-price">$5.200/90 caps</span>
-            <div class="patologias"><span class="badge">Cardiovascular</span><span class="badge">Memoria</span></div>
+            <div class="patologias">
+              <span class="badge">Cardiovascular</span>
+              <span class="badge">Memoria</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Recetas Section -->
   <section id="recetas" class="section recetas-section">
     <div class="container">
       <h2 class="section-title">🍳 Recetas Saludables</h2>
       <p class="section-subtitle">Preparaciones fáciles y nutritivas con ingredientes frescos. Cada receta está diseñada para combinar con nuestros productos.</p>
+
       <div class="products-grid">
         <div class="receta-card">
           <div class="receta-image">
@@ -1049,7 +1685,11 @@
             <h3 class="combo-title">🥤 Jugo Detox Verde</h3>
             <p class="combo-desc">Refrescante y desintoxicante. Ideal para empezar el día con energía.</p>
             <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;"><strong>Ingredientes:</strong> Espinaca, Apio, Pepino, Limón, Jengibre</p>
-            <div class="patologias"><span class="badge">Detox</span><span class="badge">Energía</span><span class="badge">Bajo en calorías</span></div>
+            <div class="patologias">
+              <span class="badge">Detox</span>
+              <span class="badge">Energía</span>
+              <span class="badge">Bajo en calorías</span>
+            </div>
           </div>
         </div>
 
@@ -1061,19 +1701,26 @@
             <h3 class="combo-title">🥣 Smoothie Bowl Energético</h3>
             <p class="combo-desc">Nutritivo bowl de frutas con toppings crujientes. Perfecto para el desayuno.</p>
             <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;"><strong>Ingredientes:</strong> Banana, Frutilla, Granola, Miel, Semillas</p>
-            <div class="patologias"><span class="badge">Energía</span><span class="badge">Antioxidante</span><span class="badge">Fibra</span></div>
+            <div class="patologias">
+              <span class="badge">Energía</span>
+              <span class="badge">Antioxidante</span>
+              <span class="badge">Fibra</span>
+            </div>
           </div>
         </div>
 
         <div class="receta-card">
           <div class="receta-image">
-            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Ensalada">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Ensalada Mediterránea">
           </div>
           <div class="receta-info">
             <h3 class="combo-title">🥗 Ensalada Mediterránea</h3>
             <p class="combo-desc">Fresca y completa. La combinación perfecta de vegetales con aceite de oliva.</p>
             <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;"><strong>Ingredientes:</strong> Tomate, Lechuga, Pepino, Aceitunas, Queso Feta</p>
-            <div class="patologias"><span class="badge">Cardiovascular</span><span class="badge">Bajo en calorías</span></div>
+            <div class="patologias">
+              <span class="badge">Cardiovascular</span>
+              <span class="badge">Bajo en calorías</span>
+            </div>
           </div>
         </div>
 
@@ -1085,18 +1732,21 @@
             <h3 class="combo-title">🍲 Crema de Verduras</h3>
             <p class="combo-desc">Reconfortante y nutritiva. Ideal para días fríos o cuando necesitas algo ligero.</p>
             <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;"><strong>Ingredientes:</strong> Zanahoria, Calabaza, Cebolla, Brócoli, Crema</p>
-            <div class="patologias"><span class="badge">Digestivo</span><span class="badge">Vitaminas</span></div>
+            <div class="patologias">
+              <span class="badge">Digestivo</span>
+              <span class="badge">Vitaminas</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
   <section id="blog" class="section blog-section">
     <div class="container">
       <h2 class="section-title">📚 Blog de Salud</h2>
       <p class="section-subtitle">Artículos sobre nutrición, consejos de salud y recetas para mejorar tu calidad de vida.</p>
+
       <div class="blog-grid">
         <div class="blog-card">
           <div class="blog-image">
@@ -1134,7 +1784,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div>
@@ -1144,7 +1793,7 @@
       <div>
         <h4>Navegación</h4>
         <a href="#combos">Combos Especiales</a>
-        <a href="#productos">Frutas y Verduras</a>
+        <a href="#categorias">Frutas y Verduras</a>
         <a href="#nutracepticos">Nutracépticos</a>
         <a href="#recetas">Recetas</a>
         <a href="#blog">Blog</a>
@@ -1168,11 +1817,41 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/5491130162232?text=Hola! Quiero hacer un pedido" target="_blank" class="whatsapp-float">
     <svg viewBox="0 0 24 24">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
+
+  <script>
+    function toggleCategory(category) {
+      const frutasContent = document.getElementById('frutas-content');
+      const verdurasContent = document.getElementById('verduras-content');
+      const frutasBtn = document.querySelector('.category-btn-frutas');
+      const verdurasBtn = document.querySelector('.category-btn-verduras');
+      
+      if (category === 'frutas') {
+        if (frutasContent.classList.contains('active')) {
+          frutasContent.classList.remove('active');
+          frutasBtn.classList.remove('active');
+        } else {
+          frutasContent.classList.add('active');
+          frutasBtn.classList.add('active');
+          verdurasContent.classList.remove('active');
+          verdurasBtn.classList.remove('active');
+        }
+      } else if (category === 'verduras') {
+        if (verdurasContent.classList.contains('active')) {
+          verdurasContent.classList.remove('active');
+          verdurasBtn.classList.remove('active');
+        } else {
+          verdurasContent.classList.add('active');
+          verdurasBtn.classList.add('active');
+          frutasContent.classList.remove('active');
+          frutasBtn.classList.remove('active');
+        }
+      }
+    }
+  </script>
 </body>
 </html>
