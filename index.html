@@ -170,15 +170,12 @@
       );
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .hero-content {
       max-width: 1400px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
       position: relative;
       z-index: 1;
     }
@@ -191,11 +188,11 @@
       border-radius: 9999px;
       font-size: 0.875rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -209,22 +206,12 @@
     }
 
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: #4b5563;
       margin-bottom: 1rem;
-      max-width: 500px;
-    }
-
-    .hero-promo {
-      background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
-      border: 2px solid rgba(57, 255, 20, 0.3);
-      border-radius: 1rem;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-promo strong {
-      color: #2e7d32;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .btn {
@@ -262,17 +249,6 @@
       background: rgba(76, 175, 80, 0.1);
     }
 
-    .hero-image {
-      position: relative;
-    }
-
-    .hero-image img {
-      width: 100%;
-      border-radius: 2rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
-    }
-
     .section {
       padding: 4rem 1rem;
     }
@@ -307,21 +283,22 @@
     }
 
     .category-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
     }
 
     .category-btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.75rem;
-      padding: 1rem 2.5rem;
+      padding: 1.25rem 2rem;
       border-radius: 1rem;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-decoration: none;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -332,7 +309,7 @@
 
     .category-btn::after {
       content: '▼';
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       margin-left: 0.5rem;
       transition: transform 0.3s ease;
     }
@@ -490,6 +467,15 @@
 
     .combos-section {
       background: linear-gradient(180deg, rgba(57, 255, 20, 0.05) 0%, white 100%);
+    }
+
+    /* Grid de 2x2 para combos en PC */
+    .combos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .combo-card {
@@ -785,18 +771,8 @@
     }
 
     @media (max-width: 968px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
       .hero h1 {
         font-size: 2.2rem;
-      }
-
-      .hero-image {
-        max-width: 400px;
-        margin: 0 auto;
       }
 
       .header-badges {
@@ -817,6 +793,14 @@
 
       .blog-cta-cards {
         grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Combos en columna para móvil */
+      .combos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
     }
 
@@ -856,13 +840,13 @@
       }
 
       .category-buttons {
-        flex-direction: row;
+        grid-template-columns: 1fr;
         gap: 0.75rem;
       }
 
       .category-btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
       }
 
       .combo-item {
@@ -1049,14 +1033,7 @@
 
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .product-card {
-      animation: fadeIn 0.5s ease forwards;
-    }
-
+      from { opacity: 0.5s; }
     .product-card:nth-child(1) { animation-delay: 0.1s; }
     .product-card:nth-child(2) { animation-delay: 0.15s; }
     .product-card:nth-child(3) { animation-delay: 0.2s; }
@@ -1097,144 +1074,13 @@
 
   <section class="hero">
     <div class="hero-content">
-      <div>
-        <span class="hero-badge">🌱 Directo del Productor a tu Mesa</span>
-        <h1>Frutas, Verduras y<br><span>Nutracépticos Frescos</span></h1>
-        <p>Traemos lo mejor del <strong>Mercado Central</strong> directo a tu hogar. Productos naturales, suplementos de calidad y precios accesibles para tu bienestar.</p>
-        
-        <div class="hero-promo">
-          <p><strong>🎁 ¡Envío GRATIS en combos desde $40.000!</strong></p>
-          <p style="font-size: 0.875rem; margin-top: 0.5rem;">Armá tu combo personal o elegí uno de nuestros combos especiales. Entregas en Esteban Echeverría, Ezeiza y Canning.</p>
-        </div>
-        
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-          <a href="#combos" class="btn btn-primary">Ver Combos</a>
-          <a href="#nutracepticos" class="btn btn-outline">Nutracépticos</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80" alt="Frutas y verduras frescas del Mercado Central - NUTRETE">
-      </div>
+      <span class="hero-badge">🌱 Directo del Productor a tu Mesa</span>
+      <h1>Frutas, Verduras y<br><span>Nutracépticos Frescos</span></h1>
+      <p>Traemos lo mejor del <strong>Mercado Central</strong> directo a tu hogar. Productos naturales, suplementos de calidad y precios accesibles para tu bienestar.</p>
     </div>
   </section>
 
-  <section id="combos" class="section combos-section">
-    <div class="container">
-      <h2 class="section-title">🎁 Combos Especiales</h2>
-      <p class="section-subtitle">Elegí uno de nuestros combos armados y <strong>ahorrá dinero</strong> con <strong style="color: #4CAF50;">envío sin costo</strong>. Todos incluyen productos frescos del Mercado Central.</p>
-
-      <div class="products-grid">
-        <div class="combo-card">
-          <div class="combo-image">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80" alt="Combo Familiar - Frutas y verduras para toda la semana">
-            <div class="combo-badges">
-              <span class="badge">🚚 Envío Gratis</span>
-              <span class="badge badge-orange">Ahorrá $5.200</span>
-            </div>
-          </div>
-          <div class="combo-info">
-            <h3 class="combo-title">Combo Familiar Completo</h3>
-            <p class="combo-desc">Ideal para una familia de 4 personas. Incluye frutas y verduras para toda la semana con la mejor calidad del Mercado Central.</p>
-            <div class="combo-products">
-              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Banana <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Tomate <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Lechuga <span class="unit unit">2 unid.</span></span>
-              <span class="combo-item">Zanahoria <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Brócoli <span class="unit kg">1 kg</span></span>
-              <span class="combo-item">Limón <span class="unit kg">1 kg</span></span>
-            </div>
-            <div class="combo-footer">
-              <span class="combo-price">$39.800</span>
-              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Familiar Completo ($39.800)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="combo-card">
-          <div class="combo-image">
-            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80" alt="Combo Detox - Frutas y verduras desintoxicantes">
-            <div class="combo-badges">
-              <span class="badge">🚚 Envío Gratis</span>
-              <span class="badge badge-orange">Ahorrá $4.800</span>
-            </div>
-          </div>
-          <div class="combo-info">
-            <h3 class="combo-title">Combo Detox & Bienestar</h3>
-            <p class="combo-desc">Perfecto para limpiar tu organismo. Frutas y verduras detoxificantes para jugos y batidos saludables.</p>
-            <div class="combo-products">
-              <span class="combo-item">Naranja <span class="unit kg">5 kg</span></span>
-              <span class="combo-item">Limón <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Espinaca <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Brócoli <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Apio <span class="unit unit">2 unid.</span></span>
-              <span class="combo-item">Jengibre <span class="unit unit">3 unid.</span></span>
-            </div>
-            <div class="combo-footer">
-              <span class="combo-price">$40.500</span>
-              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Detox & Bienestar ($40.500)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="combo-card">
-          <div class="combo-image">
-            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&q=80" alt="Combo Energía - Frutas energéticas naturales">
-            <div class="combo-badges">
-              <span class="badge">🚚 Envío Gratis</span>
-              <span class="badge badge-orange">Ahorrá $5.300</span>
-            </div>
-          </div>
-          <div class="combo-info">
-            <h3 class="combo-title">Combo Energía Vital</h3>
-            <p class="combo-desc">Frutas energéticas para empezar el día con toda la fuerza. Ideal para deportistas y personas activas.</p>
-            <div class="combo-products">
-              <span class="combo-item">Banana <span class="unit kg">5 kg</span></span>
-              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Frutilla <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Uva <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Miel <span class="unit unit">1 unid.</span></span>
-            </div>
-            <div class="combo-footer">
-              <span class="combo-price">$41.200</span>
-              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Energía Vital ($41.200)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="combo-card">
-          <div class="combo-image">
-            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Combo Verduras - Verduras frescas para cocinar">
-            <div class="combo-badges">
-              <span class="badge">🚚 Envío Gratis</span>
-              <span class="badge badge-orange">Ahorrá $4.600</span>
-            </div>
-          </div>
-          <div class="combo-info">
-            <h3 class="combo-title">Combo Verduras Frescas</h3>
-            <p class="combo-desc">Todas las verduras que necesitas para cocinar sano toda la semana. Calidad premium del Mercado Central.</p>
-            <div class="combo-products">
-              <span class="combo-item">Tomate <span class="unit kg">4 kg</span></span>
-              <span class="combo-item">Lechuga <span class="unit unit">3 unid.</span></span>
-              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Brócoli <span class="unit kg">3 kg</span></span>
-              <span class="combo-item">Cebolla <span class="unit kg">2 kg</span></span>
-              <span class="combo-item">Espinaca <span class="unit kg">1 kg</span></span>
-            </div>
-            <div class="combo-footer">
-              <span class="combo-price">$38.900</span>
-              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Verduras Frescas ($38.900)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- FRUTAS Y VERDURAS - MOVIDO ARRIBA -->
   <section id="categorias" class="category-section">
     <div class="container">
       <h2 class="section-title">🍎 Frutas y Verduras</h2>
@@ -1597,13 +1443,130 @@
                   <li>Mejora la salud del corazón</li>
                   <li>Antiinflamatorio natural</li>
                   <li>Regula el azúcar en sangre</li>
-                  <li>Base fundamental para cocinas</li>
+                  <li>Base fundamental para cocinar</li>
                 </ul>
               </div>
             </div>
             <div class="product-info">
               <h3 class="product-name">Cebolla</h3>
               <span class="product-price">$650/kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBOS - DESPUÉS DE FRUTAS Y VERDURAS -->
+  <section id="combos" class="section combos-section">
+    <div class="container">
+      <h2 class="section-title">🎁 Combos Especiales</h2>
+      <p class="section-subtitle">Elegí uno de nuestros combos armados y <strong>ahorrá dinero</strong> con <strong style="color: #4CAF50;">envío sin costo</strong>. Todos incluyen productos frescos del Mercado Central.</p>
+
+      <div class="combos-grid">
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80" alt="Combo Familiar - Frutas y verduras para toda la semana">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $5.200</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Familiar Completo</h3>
+            <p class="combo-desc">Ideal para una familia de 4 personas. Incluye frutas y verduras para toda la semana con la mejor calidad del Mercado Central.</p>
+            <div class="combo-products">
+              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Banana <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Tomate <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Lechuga <span class="unit unit">2 unid.</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">1 kg</span></span>
+              <span class="combo-item">Limón <span class="unit kg">1 kg</span></span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$39.800</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Familiar Completo ($39.800)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80" alt="Combo Detox - Frutas y verduras desintoxicantes">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $4.800</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Detox & Bienestar</h3>
+            <p class="combo-desc">Perfecto para limpiar tu organismo. Frutas y verduras detoxificantes para jugos y batidos saludables.</p>
+            <div class="combo-products">
+              <span class="combo-item">Naranja <span class="unit kg">5 kg</span></span>
+              <span class="combo-item">Limón <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Espinaca <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Apio <span class="unit unit">2 unid.</span></span>
+              <span class="combo-item">Jengibre <span class="unit unit">3 unid.</span></span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$40.500</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Detox & Bienestar ($40.500)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&q=80" alt="Combo Energía - Frutas energéticas naturales">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $5.300</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Energía Vital</h3>
+            <p class="combo-desc">Frutas energéticas para empezar el día con toda la fuerza. Ideal para deportistas y personas activas.</p>
+            <div class="combo-products">
+              <span class="combo-item">Banana <span class="unit kg">5 kg</span></span>
+              <span class="combo-item">Manzana <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Naranja <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Frutilla <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Uva <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Miel <span class="unit unit">1 unid.</span></span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$41.200</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Energía Vital ($41.200)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <div class="combo-image">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Combo Verduras - Verduras frescas para cocinar">
+            <div class="combo-badges">
+              <span class="badge">🚚 Envío Gratis</span>
+              <span class="badge badge-orange">Ahorrá $4.600</span>
+            </div>
+          </div>
+          <div class="combo-info">
+            <h3 class="combo-title">Combo Verduras Frescas</h3>
+            <p class="combo-desc">Todas las verduras que necesitas para cocinar sano toda la semana. Calidad premium del Mercado Central.</p>
+            <div class="combo-products">
+              <span class="combo-item">Tomate <span class="unit kg">4 kg</span></span>
+              <span class="combo-item">Lechuga <span class="unit unit">3 unid.</span></span>
+              <span class="combo-item">Zanahoria <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Brócoli <span class="unit kg">3 kg</span></span>
+              <span class="combo-item">Cebolla <span class="unit kg">2 kg</span></span>
+              <span class="combo-item">Espinaca <span class="unit kg">1 kg</span></span>
+            </div>
+            <div class="combo-footer">
+              <span class="combo-price">$38.900</span>
+              <a href="https://wa.me/5491130162232?text=Hola! Quiero el Combo Verduras Frescas ($38.900)" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Pedir por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -2187,8 +2150,8 @@
       </div>
       <div>
         <h4>Navegación</h4>
-        <a href="#combos">Combos Especiales</a>
         <a href="#categorias">Frutas y Verduras</a>
+        <a href="#combos">Combos Especiales</a>
         <a href="#nutracepticos">Nutracépticos</a>
         <a href="recetas.html" target="_blank">Recetas Saludables</a>
         <a href="blog.html" target="_blank">Blog de Salud</a>
@@ -2273,30 +2236,3 @@
   </script>
 </body>
 </html>
-```
-
----
-
-## ✅ Resumen del HTML Actualizado
-
-| Sección | Contenido |
-|---------|-----------|
-| **Header** | Logo + badges ubicación + WhatsApp |
-| **Navegación** | 5 botones neón: Combos, Frutas/Verduras, Nutracépticos, Recetas, Blog |
-| **Hero** | Banner + promociones + CTAs |
-| **Combos** | 4 combos con envío gratis |
-| **Frutas** | 8 productos con overlay de info nutricional |
-| **Verduras** | 6 productos con overlay de info nutricional |
-| **Nutracépticos** | 14 productos con filtros por categoría |
-| **Blog CTA** | Sección oscura con 4 tarjetas de preview |
-| **Footer** | Links + contacto + redes |
-
-**Características:**
-- ✅ Sin badges "MARGEN"
-- ✅ Responsive para PC y móvil
-- ✅ SEO con Schema.org LocalBusiness
-- ✅ WhatsApp flotante
-- ✅ Animaciones suaves
-- ✅ Navegación con efectos neón
-
-El archivo está listo para subir a GitHub y desplegar en Vercel.
