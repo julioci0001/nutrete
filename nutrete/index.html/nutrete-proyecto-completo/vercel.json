@@ -1,0 +1,23 @@
+{
+  "framework": "nextjs",
+  "regions": ["gru1", "iad1"],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Powered-By",
+          "value": "nutrEte"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "src/app/api/agent/route.ts": {
+      "maxDuration": 30
+    },
+    "src/app/api/ingest/route.ts": {
+      "maxDuration": 120
+    }
+  }
+}
